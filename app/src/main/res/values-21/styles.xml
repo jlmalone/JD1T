@@ -1,0 +1,22 @@
+<resources>
+
+    <!--<style name="AppTheme" parent="AppTheme.Base">-->
+        <!--&lt;!&ndash; Main theme colors &ndash;&gt;-->
+        <!--&lt;!&ndash;   your app branding color for the app bar &ndash;&gt;-->
+        <!--<item name="android:colorPrimary">@color/primary</item>-->
+        <!--&lt;!&ndash;   darker variant for the status bar and contextual app bars &ndash;&gt;-->
+        <!--<item name="android:colorPrimaryDark">@color/primary_dark</item>-->
+        <!--&lt;!&ndash;   theme UI controls like checkboxes and text fields &ndash;&gt;-->
+        <!--<item name="android:colorAccent">@color/accent</item>-->
+       <!--<item name="android:statusBarColor">@color/material_deep_teal_200</item>-->
+    <!--</style>-->
+
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+    </style>
+
+</resources>
