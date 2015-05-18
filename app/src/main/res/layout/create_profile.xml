@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/material_deep_teal_200"/>
+    <AutoCompleteTextView android:id="@+id/email" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="@string/prompt_email"
+        android:inputType="textEmailAddress" android:maxLines="1"
+        android:singleLine="true" />
+    <EditText android:id="@+id/create_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/create_username"
+
+        android:imeActionLabel="@string/action_sign_in_short"
+        android:imeOptions="actionUnspecified"
+        android:maxLines="1" android:singleLine="true" />
+    <EditText android:id="@+id/password" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="@string/prompt_password_forced"
+        android:imeActionId="@+id/login"
+        android:imeActionLabel="@string/action_sign_in_short"
+        android:imeOptions="actionUnspecified" android:inputType="textPassword"
+        android:maxLines="1" android:singleLine="true" />
+    <EditText android:id="@+id/password_confirm" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="@string/prompt_password_forced"
+        android:imeActionId="@+id/login"
+        android:imeActionLabel="@string/action_sign_in_short"
+        android:imeOptions="actionUnspecified" android:inputType="textPassword"
+        android:maxLines="1" android:singleLine="true" />
+    <Button android:id="@+id/email_sign_in_button" style="?android:textAppearanceSmall"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="16dp" android:text="@string/create_profile"
+        android:textStyle="bold" />
+
+</LinearLayout>

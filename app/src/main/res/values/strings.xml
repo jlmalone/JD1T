@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">JD1T</string>
+    <string name="create_username">Create Username</string>
+    <string name="create_profile">Create Profile</string>
 </resources>

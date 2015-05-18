@@ -1,4 +1,4 @@
-package com.jd1t;
+package com.jd1t.activity;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -6,6 +6,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.LoaderManager.LoaderCallbacks;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
@@ -15,6 +16,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -23,7 +25,12 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.jd1t.R;
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -83,6 +90,31 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+
+
+
+
+//        Picasso.with(this)
+//.setLoggingEnabled(true);
+//        Picasso.with(this)
+//                .setIndicatorsEnabled(true);
+//        Picasso.with(this)
+//                .load("https://www.google.se/images/nav_logo195.png")
+//                .error(R.drawable.heart)
+//                .placeholder(R.drawable.ic_launcher)
+//                .fit().centerInside()
+//                .into((ImageView)findViewById(R.id.logo), new Callback() {
+//                    @Override
+//                    public void onSuccess() {
+//
+//                    }
+//
+//                    @Override
+//                    public void onError() {
+//                        Log.v("Picasso", "there was an error");
+//                    }
+//                });
     }
 
     private void populateAutoComplete() {
@@ -286,6 +318,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             showProgress(false);
 
             if (success) {
+                startActivity(new Intent(LoginActivity.this, CreateProfileActivity.class));
                 finish();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));

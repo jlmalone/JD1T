@@ -18,10 +18,10 @@
 
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_gravity="top"
-
+                android:id="@+id/logo"
 
                 android:src="@drawable/just_do_one_thingbadge_1"/>
 
